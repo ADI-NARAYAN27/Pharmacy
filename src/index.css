@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+
+  body {
+    @apply bg-slate-50 font-sans text-slate-700 antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(15, 152, 216, 0.08), transparent 20%),
+      linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(247, 250, 252, 1) 100%);
+    min-height: 100vh;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-panel {
+    @apply rounded-3xl border border-white/70 bg-white/85 shadow-card backdrop-blur;
+  }
+
+  .section-spacing {
+    @apply py-12 sm:py-16;
+  }
+
+  .button-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-brand-500 px-5 py-3 font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-soft;
+  }
+
+  .button-secondary {
+    @apply inline-flex items-center justify-center rounded-2xl border border-brand-100 bg-white px-5 py-3 font-semibold text-brand-700 transition duration-200 hover:-translate-y-0.5 hover:border-brand-300 hover:bg-brand-50;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-700 shadow-sm transition focus:border-brand-300 focus:ring-4 focus:ring-brand-100/70;
+  }
+}
